@@ -8,11 +8,13 @@
 
 </head>
 <body>
-    <div class="container">
+
+
+    <div class="container" id="app">
         <table class="table table-bordered">
             <thead>
             <tr class="table-active const">
-                <th></th>
+                <th>時間/</th>
                 <th>星期一</th>
                 <th>星期二</th>
                 <th>星期三</th>
@@ -24,17 +26,7 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>1</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -44,6 +36,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -51,7 +44,16 @@
                 <td></td>
                 <td></td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>從農場到餐桌</td>
             </tr>
             <tr>
                 <td></td>
@@ -169,6 +171,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"
             integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
             crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/vue/2.0.1/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                message_2: 'You loaded this page on ' + new Date(),
+                seen: true
+            }
+        })
+
+    </script>
 
 </body>
 </html>
