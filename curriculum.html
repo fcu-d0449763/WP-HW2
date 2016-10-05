@@ -172,6 +172,7 @@
             integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
             crossorigin="anonymous"></script>
     <script src="http://cdn.jsdelivr.net/vue/2.0.1/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.1/vue-resource.min.js"></script>
     <script>
         var app = new Vue({
             el: '#app',
@@ -179,7 +180,21 @@
                 message: 'Hello Vue!',
                 message_2: 'You loaded this page on ' + new Date(),
                 seen: true
-            }
+            },
+            mounted: function () {
+                this.$nextTick(function () {
+                    this.fetchCourse();
+                });
+            },
+            methods: {
+                fetchCourse: function () {
+                    this.$http.get('./curriculum.json').then(function (response) {
+                    var json = response.data;
+                        console.log(json)
+
+                });
+        }
+        }
         })
 
     </script>
